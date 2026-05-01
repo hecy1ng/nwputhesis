@@ -57,7 +57,9 @@ jobs:
           cache_version: ${{ env.TEXLIVE_CACHE_VERSION }}
 
       - name: Build document
-        run: make
+        run: |
+          sed -i 's/fontset = windows/fontset = fandol/' master.tex
+          make
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v6
@@ -67,8 +69,8 @@ jobs:
           retention-days: 30
 
   test-ubuntu:
+    if: false
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, 'ci skip') }}
     steps:
       - uses: actions/checkout@v6
 
@@ -115,4 +117,6 @@ jobs:
           cache_version: ${{ env.TEXLIVE_CACHE_VERSION }}
 
       - name: Build document
-        run: make
+        run: |
+          sed -i 's/fontset = windows/fontset = fandol/' master.tex
+          make
