@@ -58,7 +58,7 @@ jobs:
 
       - name: Build document
         run: |
-          sed -i 's/fontset = windows/fontset = fandol/' master.tex
+          sed -i.bak 's/fontset = windows/fontset = fandol/' master.tex
           make
 
       - name: Upload PDF artifact
@@ -118,5 +118,5 @@ jobs:
 
       - name: Build document
         run: |
-          sed -i 's/fontset = windows/fontset = fandol/' master.tex
+          sed -i.bak 's/fontset = windows/fontset = fandol/' master.tex
           make
