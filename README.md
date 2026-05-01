@@ -21,7 +21,8 @@
 - `Z` 表示格式修复或其它不影响模板使用方式的更新。
 
 ## 使用说明
-- 推荐直接下载 [最新 Release 版本](https://github.com/1195343015/nwputhesis/releases/latest) 使用，非 Windows 系统用户需要从仓库中自行下载 Windows 字体。（不推荐 clone/fork 使用，因为仓库里有很多用于测试的文件，整体体积较大，而且处于不稳定的开发状态）
+- **Fork 仓库**（推荐）：Fork [最新版本对应的 Tag](https://github.com/1195343015/nwputhesis/releases/latest)，方便后续通过 Git 跟踪更新。
+- **下载 Release**：也可直接下载 [最新 Release 版本](https://github.com/1195343015/nwputhesis/releases/latest)。非 Windows 系统用户需要从仓库中自行下载 Windows 字体。
 - 支持各种操作系统，推荐在 TeX Live 最新版本下搭配 VS Code 中的 LaTeX Workshop 插件使用。
 
 ### 编译方式
@@ -72,7 +73,7 @@
 
 论文插图全部放在 `content/figures` 目录下，项目已将默认图片路径设为该目录，在 tex 文件中可直接引用文件名，无需添加路径前缀。例如：`\includegraphics{example.png}`。
 
-硕博提交最终版论文时，可直接将签字版声明扫描成电子版 PDF，替换 [声明.pdf](content/figures/声明.pdf)。
+硕博提交最终版论文时，可直接将签字版声明扫描成电子版 PDF，替换 [研究生学位论文使用授权声明.pdf](content/figures/研究生学位论文使用授权声明.pdf)。
 
 ### LaTeX 新手指南
 [清华大学 thuthesis 提供的新手指南](https://github.com/tuna/thuthesis/wiki/%E6%96%B0%E6%89%8B%E6%8C%87%E5%8D%97)（对本项目同样适用）
