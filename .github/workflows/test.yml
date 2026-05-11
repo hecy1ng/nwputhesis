@@ -63,13 +63,17 @@ jobs:
       - name: Build document
         run: |
           sed -i.bak 's/fontset = windows/fontset = fandol/' master.tex
+          sed -i.bak 's/fontset = windows/fontset = fandol/' bachelor.tex
           make
+          latexmk -xelatex bachelor
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v6
         with:
           name: nwputhesis-pdf-tl${{ matrix.texlive_version }}
-          path: master.pdf
+          path: |
+            master.pdf
+            bachelor.pdf
           retention-days: 30
 
   test-ubuntu:
@@ -124,4 +128,6 @@ jobs:
       - name: Build document
         run: |
           sed -i.bak 's/fontset = windows/fontset = fandol/' master.tex
+          sed -i.bak 's/fontset = windows/fontset = fandol/' bachelor.tex
           make
+          latexmk -xelatex bachelor
