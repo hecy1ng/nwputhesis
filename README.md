@@ -5,7 +5,6 @@
 ***NwpuThesis***
 
 [![Test](https://github.com/1195343015/nwputhesis/actions/workflows/test.yml/badge.svg)](https://github.com/1195343015/nwputhesis/actions/workflows/test.yml)
-[![Release](https://img.shields.io/github/v/release/1195343015/nwputhesis?color=orange)](https://github.com/1195343015/nwputhesis/releases/latest)
 [![TeX Live](https://img.shields.io/badge/TeX%20Live-2026-yellow)](https://www.tug.org/texlive/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
@@ -31,11 +30,9 @@
 - `Z` 表示格式修复或其它不影响模板使用方式的修复。
 
 ## 使用说明
-获取模板有两种方式（二选一）：
-- **Fork / Clone 仓库（推荐）**：可以获取最新版本的模板，优先推荐 通过 Fork 使用，方便后续通过 Git 跟踪更新。
-- **下载 Release**：直接下载 [最新 Release 版本](https://github.com/1195343015/nwputhesis/releases/latest)。
+推荐通过 Fork / Clone 仓库获取模板，可以获取最新版本，方便后续通过 Git 跟踪更新。
 
-- 非 Windows 系统用户需要从仓库中自行下载 Windows 字体。
+非 Windows 系统用户需要从仓库中自行下载 Windows 字体。
 
 ### 编译方式
 推荐在 TeX Live 最新版本下搭配 VS Code 中的 LaTeX Workshop 插件使用，提供了两种编译方式（如下图所示）：
