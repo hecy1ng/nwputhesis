@@ -43,7 +43,7 @@
 - **Recipe: xelatex (fast)**：快速编译，在不修改参考文献时使用
 - 推荐平常使用第二种方式即可，只在添加参考文献时使用第一种方式
 
-![[编译方式]](content/figures/example.png)
+![[编译方式]](nwputhesis/assets/example.png)
 
 ### 论文格式设置
 推荐直接编译对应的入口文件：
@@ -99,7 +99,7 @@
 
 ## 交流群
 
-<img src="nwputhesis/assets/QQ交流群.jpg" width="200">
+<img src="content/figures/QQ交流群.png" width="200">
 
 ## 许可证
 本项目的硕博格式基于 [Yet-Another-LaTeX-Template-for-NPU-Thesis](https://github.com/NWPUMetaphysicsOffice/Yet-Another-LaTeX-Template-for-NPU-Thesis) 修改，本科生论文格式设计部分参考了 [LaTeX-Template-For-NPU-Thesis](https://github.com/polossk/LaTeX-Template-For-NPU-Thesis) 、 [LaTeX-NewTemplate-For-NPU-undergraduate-Thesis](https://github.com/jialinlvcn/LaTeX-NewTemplate-For-NPU-undergraduate-Thesis) 和 [NWPU-Thesis-Template](https://github.com/lihanshu/NWPU-Thesis-Template) ，项目整体实现设计还参考了 [thuthesis](https://github.com/tuna/thuthesis) 。
