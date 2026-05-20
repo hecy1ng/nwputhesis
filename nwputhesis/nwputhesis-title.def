@@ -284,6 +284,7 @@
 %%-----------------------------------------------------------------------------%
 \cs_new_protected:Npn \make@nwpu@coverpage {                          % 设置封皮页
     \thispagestyle{empty}                                   % 清空页面格式
+    \setlength{\tabcolsep}{0pt}                             % 封皮表格列内边距
     \begin{titlepage}                                       %
         % 彩色封面背景图
         \nwpu_if_colorcover:TF {

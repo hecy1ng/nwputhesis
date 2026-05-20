@@ -275,7 +275,6 @@
         \arraybackslash\hspace{0pt}}p{#1}}                  %
 \cs_gset:Npn \arraystretch {\nwpuTableArrayStretch}          % 表格行高
 \dim_set:Nn \arrayrulewidth { \nwpuTableRuleWidth }          % 表格框线宽
-\dim_set:Nn \tabcolsep { \nwpuTableColumnSep }               % 表格列内边距
 \dim_set:Nn \heavyrulewidth { \nwpuHeavyRuleWidth }          % 表格上下线宽
 \dim_set:Nn \lightrulewidth { \nwpuLightRuleWidth }          % 表格中线宽
 %%-----------------------------------------------------------------------------%

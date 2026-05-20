@@ -173,9 +173,6 @@
   { \cs_new:Npn \nwpuTableArrayStretch { 2.0 } }              % 本科表格行高倍率
   { \cs_new:Npn \nwpuTableArrayStretch { 1.4 } }               % 研究生表格行高倍率
 \cs_new:Npn \nwpuTableRuleWidth { 0.5pt }                   % 全局普通表格线宽
-\nwpu_if_bachelor:TF
-  { \cs_new:Npn \nwpuTableColumnSep { 6pt } }                 % 本科表格列内左右边距
-  { \cs_new:Npn \nwpuTableColumnSep { 0pt } }                  % 研究生表格列内左右边距
 
 %%=== 封皮与内封尺寸 =====================================================
 \cs_new:Npn \nwpuCoverVisualBottomRaise { 1.5pt }           % 封皮固定高度单元格文字底端微调
