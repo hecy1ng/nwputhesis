@@ -15,6 +15,8 @@
 \bool_new:N \l__nwpu_font_local_bool                         % 使用本地 fonts 目录字体
 \bool_new:N \l__nwpu_font_using_fandol_bool                  % 实际使用 Fandol 字体标记
 \bool_new:N \l__nwpu_colorcover_bool                         % 彩色封面封底标记
+\bool_new:N \l__nwpu_listfigures_bool                        % 图/表目录标记
+\bool_set_true:N \l__nwpu_listfigures_bool
 \bool_new:N \l__nwpu_class_loaded_bool                       % 类文件已完成加载
 \tl_new:N \l__nwpu_bibstyle_tl
 \tl_set:Nn \l__nwpu_bibstyle_tl { gb7714-2015 }               % 默认参考文献标准
@@ -188,6 +190,8 @@
     colorcover  .default:n = true,
     color-cover .code:n    = { \nwpu_colorcover_set:n {#1} },
     color-cover .default:n = true,
+    listfigures .code:n    = { \__nwpu_set_bool:Nn \l__nwpu_listfigures_bool {#1} },
+    listfigures .default:n = true,
     unknown     .code:n    = { \nwpu_unknown_key:n {#1} },
   }
 \ProcessKeyOptions [ nwputhesis ]
@@ -210,6 +214,8 @@
   { \bool_if:NTF \l__nwpu_blindreview_bool { \prg_return_true: } { \prg_return_false: } }
 \prg_new_conditional:Npnn \nwpu_if_colorcover: { T, F, TF }
   { \bool_if:NTF \l__nwpu_colorcover_bool { \prg_return_true: } { \prg_return_false: } }
+\prg_new_conditional:Npnn \nwpu_if_listfigures: { T, F, TF }
+  { \bool_if:NTF \l__nwpu_listfigures_bool { \prg_return_true: } { \prg_return_false: } }
 \prg_new_conditional:Npnn \nwpu_if_fandol: { T, F, TF }
   { \bool_if:NTF \l__nwpu_font_using_fandol_bool { \prg_return_true: } { \prg_return_false: } }
 \prg_new_conditional:Npnn \nwpu_if_local_fonts: { T, F, TF }

@@ -2,12 +2,13 @@
 % !TEX ts-program = xelatex
 % !BIB program = biber
 \documentclass[
-    degree = master,       % phd | master | bachelor
-    fontset = windows,     % windows | fandol | local
-    academic = true,       % true | false
-    blindreview = false,   % true | false
-    colorcover = true,     % true | false
-    bibindent = auto,      % auto | firstline | none | hanging
+    degree = master,       % 学位类型：phd | master | bachelor
+    fontset = windows,     % 字体集：windows | fandol | local
+    academic = true,       % 学术学位（true）或专业学位（false）
+    blindreview = false,   % 盲审模式：启用后隐藏作者与导师信息
+    colorcover = true,     % 彩色封面（仅硕博有效）
+    listfigures = false,   % 生成图目录和表目录（仅硕博有效）
+    bibindent = auto,      % 参考文献缩进：auto | firstline | none | hanging
 ]{nwputhesis}
 
 \input{thesis-body}
