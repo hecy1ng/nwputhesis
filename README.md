@@ -28,7 +28,7 @@ Fork 仓库后 Clone 到本地获取模板。字体自动检测，Windows 用户
 - **Recipe: xelatex + biber + xelatex x 2**：编译参考文献时使用
 - **Recipe: xelatex (fast)**：日常编辑时使用
 
-![[编译方式]](infra/nwputhesis/assets/example.png)
+![[编译方式]](infra/template/assets/example.png)
 
 ### 入口文件
 

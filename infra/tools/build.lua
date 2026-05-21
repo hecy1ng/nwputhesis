@@ -5,14 +5,14 @@
 module = "nwputhesis"
 
 supportdir = "./infra/testfiles/support"
-checksuppfiles = {"*.tex", "*.bib", "*.cls", "infra/nwputhesis/*.def", "figures/*", "*.ttf"}
+checksuppfiles = {"*.tex", "*.bib", "*.cls", "infra/template/*.def", "figures/*", "*.ttf"}
 
-installfiles = {"*.cls", "infra/nwputhesis/*.def"}
-sourcefiles = {"*.cls", "infra/nwputhesis/*.def"}
+installfiles = {"*.cls", "infra/template/*.def"}
+sourcefiles = {"*.cls", "infra/template/*.def"}
 
 function checkinit_hook()
-  mkdir(testdir .. "/infra/nwputhesis")
-  cp("infra/nwputhesis/nwputhesis-*.def", unpackdir, testdir .. "/infra/nwputhesis")
+  mkdir(testdir .. "/infra/template")
+  cp("infra/template/nwputhesis-*.def", unpackdir, testdir .. "/infra/template")
   return 0
 end
 
