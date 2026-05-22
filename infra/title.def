@@ -555,7 +555,7 @@
           { \npu@text{} & \npu@text{} & \npu@text{} \\ }
     \end{tabular}\par}                                     %
 %%-----------------------------------------------------------------------------%
-\cs_new_protected:Npn \committee #1 #2 {                                 %
+\cs_new_protected:Npn \committee #1 #2 #3 #4 {                            %
     \par \nwpuCommitteeBodyFont \vspace{\nwpuCommitteeBeforeDefenseSkip}%
     \makebox[\linewidth][c]{\nwpuCommitteeSectionTitleFont 答辩委员会名单} \par%
     \vspace{\nwpuCommitteeDefenseTableBeforeSkip}            %
@@ -565,9 +565,9 @@
         O{\nwpuCommitteeRankWidth}
         O{\nwpuCommitteeOrgWidth}
       }
-        \defenseDate{#1} \nwpuCommitteeBodyFont\textbf{答辩委员会} & %   %
+        \defenseDate{#1 年 #2 月 #3 日} \nwpuCommitteeBodyFont\textbf{答辩委员会} & %
         \expert{\textbf{姓名}}{\textbf{职称}}{\textbf{工作单位}}
-        #2\relax                                            %
+        #4\relax                                            %
     \end{tabular}\par}                                     %
 %%=============================================================================%
 
