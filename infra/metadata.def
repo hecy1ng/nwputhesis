@@ -227,10 +227,30 @@
   { \cs_gset:Npn \nwpu@chs@advisor { \blindreview{#1} } }
 \cs_new_protected:Npn \nwpu@set@eng@advisor #1
   { \cs_gset:Npn \nwpu@eng@advisor { \blindreview{#1} } }
+\bool_new:N \l__nwpu_rank_en_explicit_bool                    % 是否手动指定英文职称
+\prop_new:N \l__nwpu_rank_en_prop                             % 职称中英文对照表
+\prop_set_from_keyval:Nn \l__nwpu_rank_en_prop
+  {
+    教授 = Professor,
+    副教授 = Associate~Professor,
+    研究员 = Researcher,
+    讲师 = Lecturer,
+  }
 \cs_new_protected:Npn \nwpu@set@chs@advisor@rank #1
-  { \cs_gset:Npn \nwpu@chs@advisorAcademicRank { \nobreakspace\nobreakspace #1 } }
+  {
+    \cs_gset:Npn \nwpu@chs@advisorAcademicRank { \nobreakspace\nobreakspace #1 }
+    \bool_if:NF \l__nwpu_rank_en_explicit_bool
+      {
+        \prop_get:NnNTF \l__nwpu_rank_en_prop {#1} \l_tmpa_tl
+          { \cs_gset:Npx \nwpu@eng@advisorAcademicRank { \l_tmpa_tl } }
+          { \cs_gset:Npn \nwpu@eng@advisorAcademicRank { \chs@space } }
+      }
+  }
 \cs_new_protected:Npn \nwpu@set@eng@advisor@rank #1
-  { \cs_gset:Npn \nwpu@eng@advisorAcademicRank {#1} }
+  {
+    \bool_set_true:N \l__nwpu_rank_en_explicit_bool
+    \cs_gset:Npn \nwpu@eng@advisorAcademicRank {#1}
+  }
 \cs_new_protected:Npn \nwpu@set@chs@funding #1
   { \cs_gset:Npn \nwpu@chs@funding {#1} }
 \cs_new_protected:Npn \nwpu@set@eng@funding #1
